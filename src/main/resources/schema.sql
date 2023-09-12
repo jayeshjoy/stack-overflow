@@ -1,0 +1,33 @@
+CREATE TABLE UserTable (
+    ID VARCHAR(36) NOT NULL,
+    Name VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) NOT NULL,
+    PRIMARY KEY (ID),
+    UNIQUE INDEX(Email)
+);
+
+CREATE TABLE Questions (
+    ID VARCHAR(36) NOT NULL,
+    Author VARCHAR(36) NOT NULL,
+    Content VARCHAR(255) NOT NULL,
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE Answers (
+    ID VARCHAR(36) NOT NULL,
+    Question VARCHAR(36) NOT NULL,
+    Author VARCHAR(36) NOT NULL,
+    Content VARCHAR(255) NOT NULL,
+    PRIMARY KEY (ID),
+    INDEX(Question)
+);
+
+CREATE TABLE Upvotes (
+    ID VARCHAR(36) NOT NULL,
+    Answer VARCHAR(36) NOT NULL,
+    AnswerAuthor VARCHAR(36) NOT NULL,
+    Author VARCHAR(36) NOT NULL,
+    PRIMARY KEY (ID),
+    UNIQUE INDEX(Answer, Author),
+    INDEX(Answer)
+)

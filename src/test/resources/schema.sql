@@ -1,0 +1,8 @@
+CREATE TABLE Temp (
+    ID VARCHAR(36) NOT NULL,
+    Name VARCHAR(255) NOT NULL,
+    Birth_date TIMESTAMP,
+    Titles INTEGER,
+    PRIMARY KEY (ID),
+    INDEX(Name)
+);

@@ -1,0 +1,8 @@
+package com.jayeshjoy.rippling.controllers;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class UserController {
+
+}
